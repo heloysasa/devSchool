@@ -3,10 +3,20 @@
     flex-direction:row;
 }
 
-.lado-esquerdo{}
+.lado-esquerdo{
+position: absolute;
+width: 356px;
+height: 1176px;
+left: 0px;
+top: 0px;
+
+background: #2B3031;
+}
 
 
-.cabecalho{}
+.cabecalho{
+
+}
 
 
 .logo{}
@@ -51,4 +61,10 @@
 
 
 
-.cabecalho2{}
+.cabecalho2{
+    position: absolute;
+    width: 1004px;
+    height: 57px;
+    left: 394px;
+    top: 17px;
+}
