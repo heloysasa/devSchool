@@ -38,14 +38,17 @@ si.post('/matricula', async (req,resp) => {
 })
 
 
-si.put('/matricula', async (req,resp) =>{
+si.put('/matricula/:id', async (req,resp) =>{
     try{
-        let id = req.query.id;
+        let id = req.params.id;
         let nCurso = req.body.nCurso;
 
         let al = await db.tb_matricula.update(
             {
-                nm_curso: nCurso
+                nm_aluno: nAluno,
+                nr_chamada: nuCham,
+                nm_curso: nCurso,
+                nm_turma: nTurmas
             },
             {
                 where: {id_matricula: id}
@@ -57,9 +60,9 @@ si.put('/matricula', async (req,resp) =>{
 })
 
 
-si.delete('/matricula', async (req,resp) => {
+si.delete('/matricula/:id', async (req,resp) => {
     try{
-    let s = await db.tb_matricula.destroy ({where: { id_matricula: req.query.id}});
+    let s = await db.tb_matricula.destroy ({where: { id_matricula: req.params.id}});
     resp.sendStatus(200)
     } catch (e){
         resp.send({erro: e.toString()});
