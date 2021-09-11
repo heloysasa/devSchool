@@ -1,3 +1,8 @@
+import styled from 'styled-components'
+
+const Container = styled.div`
+margin-left: 18em;
+
 body {
     margin: 0;
   }
@@ -6,218 +11,11 @@ body {
     box-sizing: border-box;
   }
 
-
-
-.mae{
-    display:flex;
-    flex-direction:row;
-    width: 100%;
-}
-
+  background-color: #F5F5F5;
 
 button{
     cursor:pointer;
 }
-
-.lado-esquerdo{
-position: fixed;
-width: 18em;
-height: 100VH;
-left: 0px;
-top: 0px;
-
-background: #2B3031;
-}
-
-
-.cabecalho{
-    display:flex;
-    flex-direction:row;
-    margin: 2em;
-    align-items: center;
-    justify-content: center;
-}
-
-
-.logo{
-    border-right: 10px solid transparent;
-}
-
-
-
-.nome{
-    font: 700 1.2em Roboto;
-}
-
-span{
-    color: #EA10C7;
-}
-
-
-.barra{
-   background-color: #262626;
-   color: #262626;
-   height: 3em;
-}
-
-
-.especificacoes{
-    display:flex;
-    flex-direction:row;
-    
-    justify-content: space-between;
-
-}
-
-
-.opcao{
-    font: 700 1.2em Roboto;
-    color:white;
-    margin-left: 2em;
-}
-
-
-.setinha{
-    margin-top: 0.5em;
-    margin-right: 1em;
-}
-
-
-.al{
-    display:flex;
-    flex-direction:row;
-    background-color: white;
-    height: 3em;
-    margin-top: 2em;
-}
-
-
-.barra-rosa{}
-
-
-
-
-.click{
-    font: 700 1.2em Roboto;
-    margin: .5em 2em;
-}
-
-
-
-
-
-
-
-
-
-.lado-direito{
-    display:flex;
-    flex-direction: column;
-    background-color: #F5F5F5;
-    margin-left: 18em;
-    height: 190vh;
-    width: 68em;
-}
-
-
-
-
-.cabecalho2{
-    display:flex;
-    flex-direction:row;
-    background-color: white;
-    position: absolute;
-    width: 65.9em;
-    height: 66px;
-    top: 17px;
-    margin-left: 1.6em;
-    left: 16.4em;
-    margin-top: -1em;
-
-}
-
-
-
-.imgs{
-    margin-left: 1em;
-}
-
-.imagem button{
-    padding: 0em;
-    border-radius: 3em;
-}
-
-
-.imagem{
-    border-right: 10px solid transparent;
-    height: 0em;
-}
-
-
-
-.bolinha{
-    margin-left: 3em;
-}
-
-
-
-.n{
-    margin-left: 3.4em;
-    margin-top: -1.2em;
-    font: 700 1em Roboto;
-}
-
-
-
-.frase{
-    font: 700 1em Roboto;
-    align-items: flex-end;
-
-    margin-top: 2em;
-}
-
-
-
-.opcoes{ 
-    display:flex;
-    flex-direction:row;
-    align-items: center;
-    justify-content: center;
-    margin-left: 41em;
-    margin-top: -0.5em;
-}
-
-
-.recarregar button{
-    display:flex;
-    align-items: center;
-    border-radius: 50%;
-    background-color: #986CDF;
-    border: black;
-    height: 34px;
-    width: 34px;
-}
-
-
-
-.recarregar{
-    border-right: 10px solid transparent;
-}
-
-.sair button{
-    display:flex;
-    align-items: center;
-    border-radius: 50%;
-    background-color: #986CDF;
-    border: black;
-    height: 34px;
-    width: 34px;
-}
-
-.sair{
-    border-right: 10px solid transparent;
-}
-
 
 
 
@@ -231,7 +29,7 @@ span{
 .descricao{
     display:flex;
     flex-direction:row;
-    Height:6em;
+    height:6em;
     margin-top: 2em;
     margin-left: 3em;
 }
@@ -462,20 +260,6 @@ th,td {
     justify-content: space-between;
 
 }
+`
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+export{Container}
