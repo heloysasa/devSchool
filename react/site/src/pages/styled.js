@@ -250,8 +250,6 @@ th,td {
 
 
 .boto{
-    border-right: 10px solid transparent;
-    border-radius: 5em;
     visibility: hidden;
 }
 
