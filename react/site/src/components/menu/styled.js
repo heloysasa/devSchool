@@ -1,16 +1,7 @@
 import styled from 'styled-components'
 
 const ContainerMenu = styled.div`
-
-body {
-    margin: 0;
-  }
-  
-  * {
-    box-sizing: border-box;
-  }
-
-  background-color: #F5F5F5;
+    background-color: #f5f5f5;
 
 
 button{
@@ -72,6 +63,7 @@ span{
     font: 700 1.2em Roboto;
     color:white;
     margin-left: 2em;
+    padding-top:0.5em;
 }
 
 

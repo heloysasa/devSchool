@@ -2,13 +2,14 @@ import db from './db.js';
 import express from 'express';
 import cors from 'cors'
 
+
 const si = express();
 si.use(cors());
 si.use(express.json());
 
 si.get('/matricula', async (req,resp) => {
    try{
-    let alunos = await db.tb_matricula.findAll();
+    let alunos = await db.tb_matricula.findAll({order: [['id_matricula', 'desc']]});
    resp.send(alunos);
 } catch (e){
     resp.send({erro: 'não foi possível consultar'})
@@ -22,7 +23,7 @@ si.post('/matricula', async (req,resp) => {
     try{
         let alu = req.body;
 
-        let a = await db.tb_matricula.findOne({where:{nm_aluno: alu.nome }})
+        let a = await db.tb_matricula.findOne({where:{nr_chamada: alu.chamada, nm_turma: alu.turma  }})
         if (a != null)
            return resp.send({erro: 'Aluno já cadastrado'})
     
@@ -41,14 +42,14 @@ si.post('/matricula', async (req,resp) => {
 si.put('/matricula/:id', async (req,resp) =>{
     try{
         let id = req.params.id;
-        let nCurso = req.body.nCurso;
+        let n = req.body;
 
         let al = await db.tb_matricula.update(
             {
-                nm_aluno: nAluno,
-                nr_chamada: nuCham,
-                nm_curso: nCurso,
-                nm_turma: nTurmas
+                nm_aluno: n.nome,
+                nr_chamada: n.chamada,
+                nm_curso: n.curso,
+                nm_turma: n.turma
             },
             {
                 where: {id_matricula: id}

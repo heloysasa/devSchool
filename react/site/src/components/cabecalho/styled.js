@@ -2,16 +2,8 @@ import styled from 'styled-components'
 
 const Container = styled.div`
 margin-left: 3em;
+background-color: #f5f5f5;
 
-body {
-    margin: 0;
-  }
-  
-  * {
-    box-sizing: border-box;
-  }
-
-  background-color: #F5F5F5;
 
 
 button{
@@ -22,11 +14,11 @@ button{
     display:flex;
     flex-direction:row;
     background-color: white;
-    position: absolute;
+    margin-left: -3.4em;
+
     width: 65.9em;
-    height: 66px;
+    height: 71px;
     top: 17px;
-    margin-left: 1.6em;
     left: 16.4em;
     margin-top: -1em;
 
@@ -35,7 +27,7 @@ button{
 
 
 .imgs{
-    margin-top: .5em;
+    margin-top: .6em;
     margin-left: 1em;
 }
 
@@ -81,7 +73,7 @@ button{
     flex-direction:row;
     align-items: center;
     justify-content: center;
-    margin-left: 41em;
+    margin-left: 45em;
     margin-top: .5em;
 }
 

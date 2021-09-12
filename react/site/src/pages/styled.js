@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 const Container = styled.div`
 margin-left: 18em;
+background-color: #f5f5f5;
 
 body {
     margin: 0;
@@ -11,7 +12,7 @@ body {
     box-sizing: border-box;
   }
 
-  background-color: #F5F5F5;
+ 
 
 button{
     cursor:pointer;
@@ -22,6 +23,7 @@ button{
 .pt2{
     background-color: white;
     margin: 8em 4em 4em 4em;
+    height: 13em;
 }
 
 
@@ -30,8 +32,10 @@ button{
     display:flex;
     flex-direction:row;
     height:6em;
-    margin-top: 2em;
-    margin-left: 3em;
+    margin-top: -4em;
+    margin-left: 5em;
+    padding-top: 1em;
+
 }
 
 
@@ -163,7 +167,12 @@ input{
     background-color: white;
     margin-left:4em;
     margin-right:4em;
-    height:104vh;
+    height:90vh;
+    
+    overflow: hidden;
+    overflow-y: scroll;
+    height: 2500px;
+    max-height: 300px;
 }
 
 
@@ -176,7 +185,10 @@ input{
     font: 700 1.5em Roboto;
     height: 2em;
     margin-top: 2em;
-    margin-left: 2em;
+    margin-left: 3.6em;
+    margin-bottom: 1em;
+    padding-top: .6em;
+
 }
 
 
@@ -227,12 +239,7 @@ th,td {
 }
 
 
-
-.alterar{
-    border-right: 10px solid transparent;
-}
-
-.alterar button{
+.boto button{
     background-color:#565656;
     border-radius: 50%;
     padding: .4em .4em;
@@ -241,24 +248,24 @@ th,td {
 }
 
 
-.excluir{
+.boto{
     border-right: 10px solid transparent;
     border-radius: 5em;
+    visibility: hidden;
 }
 
 
-.excluir button{
-    background-color:#565656;
-    border-radius: 50%;
-    padding: .4em .4em;
-    border: none;
-    
+tr:hover{
+    .boto{
+        visibility: visible;
+    }
 }
 
 
-.resultados2{
-    justify-content: space-between;
 
+
+.resultadosCinza{
+    background-color: #f5f5f5;
 }
 `
 
