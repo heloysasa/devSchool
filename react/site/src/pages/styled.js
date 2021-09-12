@@ -178,7 +178,7 @@ input{
 
 
 
-.descricao2{
+ .descricao2{
     display:flex;
     flex-direction:row;
     
@@ -236,6 +236,7 @@ th,td {
 
 .resultados{
     justify-content: space-between;
+    height: 3em;
 }
 
 
@@ -266,7 +267,9 @@ tr:hover{
 
 .resultadosCinza{
     background-color: #f5f5f5;
-}
+    height: 3em;
+
+} 
 `
 
 export{Container}

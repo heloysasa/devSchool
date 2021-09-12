@@ -70,6 +70,7 @@ span{
 .setinha{
     margin-top: 0.5em;
     margin-right: 1em;
+    cursor: pointer;
 }
 
 

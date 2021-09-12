@@ -42,24 +42,31 @@ export default function Conteudo(){
 
             if (!nome || nome.replace === '' )
             return toast.error('O nome do aluno é obrigatório'); 
+            loading.current.complete();
        
             if ( nome.length <= 4)
             return toast.error('O campo nome precisa ter mais do que 4 caracteres'); 
+            loading.current.complete();
        
             if (chamada < 0 )
             return toast.error('O número da chamada não pode ser negativo'); 
+            loading.current.complete();
 
-            if (chamada != parseInt(chamada))
-            return toast.error('Letras não podem ser utilizadas na chamada'); 
-       
+            if (chamada.number === NaN)
+            return toast.error('Letras não podem ser utilizadas na chamada');
+            loading.current.complete();
+
             if (!chamada || chamada.replace === '')
             return toast.error('O número da chamada é obrigatório'); 
+            loading.current.complete();
        
             if (!turma|| turma.replace === '')
             return toast.error('O nome da turma é obrigatório'); 
+            loading.current.complete();
        
             if (!curso || curso.replace === '')
             return toast.error('O nome do curso é obrigatório'); 
+            loading.current.complete();
 
 
          let r = await api.inserir(nome, chamada, curso, turma);
@@ -155,7 +162,7 @@ export default function Conteudo(){
                 <div class="lado2">
                     <div class="ter">
                         <div class="ch">Chamada:</div>
-                        <input type="text" value={chamada} onChange={e => setChamada(e.target.value)}/>
+                        <input type="text" keyboardType="numeric" value={chamada} onChange={e => setChamada(e.target.value)}/>
                     </div>
                     <div class="qua">
                         <div class="t">Turma:</div>
