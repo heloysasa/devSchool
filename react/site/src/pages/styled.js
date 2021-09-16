@@ -16,6 +16,12 @@ body {
 
 button{
     cursor:pointer;
+    
+}
+
+
+button:hover{
+    opacity:0.5;
 }
 
 
@@ -167,12 +173,7 @@ input{
     background-color: white;
     margin-left:4em;
     margin-right:4em;
-    height:90vh;
-    
-    overflow: hidden;
-    overflow-y: scroll;
-    height: 2500px;
-    max-height: 300px;
+    height:auto;
 }
 
 
