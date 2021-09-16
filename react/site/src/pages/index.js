@@ -52,7 +52,7 @@ export default function Conteudo(){
             return toast.error('O número da chamada não pode ser negativo'); 
             loading.current.complete();
 
-            if (chamada.number === NaN)
+            if (chamada != parseInt(chamada))
             return toast.error('Letras não podem ser utilizadas na chamada');
             loading.current.complete();
 
@@ -63,9 +63,17 @@ export default function Conteudo(){
             if (!turma|| turma.replace === '')
             return toast.error('O nome da turma é obrigatório'); 
             loading.current.complete();
+
+            if (turma == parseInt(turma))
+            return toast.error('Números não podem ser utilizadas na turma');
+            loading.current.complete();
        
             if (!curso || curso.replace === '')
             return toast.error('O nome do curso é obrigatório'); 
+            loading.current.complete();
+
+            if (curso == parseInt(curso))
+            return toast.error('Números não podem ser utilizadas no curso');
             loading.current.complete();
 
 
@@ -120,11 +128,14 @@ export default function Conteudo(){
      }
 
      async function alterar(item) {
+
          setNome(item.nm_aluno);
          setChamada(item.nr_chamada);
          setCurso(item.nm_curso);
          setTurma(item.nm_turma);
          setIdAlterando(item.id_matricula);
+
+        
      }
 
 
@@ -189,6 +200,7 @@ export default function Conteudo(){
                     <th>Curso</th>
                     <th></th>
                     <th></th>
+                    <th></th>
                   </tr>
                 </thead>
                 <tbody>
@@ -200,6 +212,7 @@ export default function Conteudo(){
                     <td>{item.nr_chamada}</td>
                     <td>{item.nm_turma}</td>
                     <td>{item.nm_curso}</td>
+                    <td></td>
                     <td class="boto">
                         <button onClick={()=> alterar(item)}>
                             <img src="/assets/alterar (2).svg" alt=""/>
